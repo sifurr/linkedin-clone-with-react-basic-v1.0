@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../Root/Root";
 import Home from "../components/Home/Home";
-import WelcomeSignIn from "../components/WelcomeSignIn/WelcomeSignIn";
+import WelcomeRegister from "../components/WelcomeRegister/WelcomeRegister";
+import Welcome from "../pages/Welcome/Welcome";
 
 
 const linkedinRouter = createBrowserRouter([
@@ -12,10 +13,14 @@ const linkedinRouter = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        children: [
+        children: [          
           {
             path: '/welcome-sign-in',
-            element: <WelcomeSignIn></WelcomeSignIn>
+            element: <Welcome></Welcome>
+          },
+          {
+            path: '/welcome-register',
+            element: <WelcomeRegister></WelcomeRegister>
           }
         ]
       },
